@@ -1,0 +1,21 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<math.h>
+
+int main() {
+   int a,b=0;
+   printf("Input a number: ");
+   scanf("%d",&a);
+   for(int i=2;i<sqrt(a);i=i+1){
+       if(a%i==0){
+           printf("It is composite number");
+           b=1;
+           return 0;
+       }
+   }
+   if(b==0){
+       printf("It is a prime number");
+   }
+   
+    return 0;
+}
