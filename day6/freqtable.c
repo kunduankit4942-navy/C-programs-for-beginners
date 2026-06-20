@@ -1,12 +1,12 @@
 // Online C compiler to run C program online
 #include <stdio.h>
 #include<math.h>
-#define sz 20
+#define sz 5
 int main() {
-   int n=20,dv,c,k;
+   int n=sz,dv,c,k;
    int a[sz];
    
-    printf("Input the 20 numbers in A: \n");
+    printf("Input the %d numbers in A: \n",n);
     for(int i=0;i<n;i++){
        scanf("%d", &a[i]); 
     }
