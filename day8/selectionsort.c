@@ -6,26 +6,30 @@
 #define sz 10
 
 int main() {
-    int a[sz],i,j,k,mn,mp,t,key;
+    int a[sz],i,j,k,min,temp;
     srand(time(NULL));
-    
+
+    // Generate random numbers
     for ( i = 0; i < sz; i++) {
-        a[i] = rand() % 1000;  
+        a[i] = rand() % 1000;   // 1 to 100
     }
     for ( k = 0; k < sz; k++) {
         printf(" %d", a[k]);
     } 
     
-    for(int i = 1; i < sz; i++) {
-        int key = a[i];
-        int j = i - 1;
-
-        while(j >= 0 && a[j] > key) {
-            a[j + 1] = a[j];
-            j--;
+    for(i=0;i<sz-1;i++){
+        min=i;
+        for(j=i+1;j<sz;j++){
+            if(a[j]<a[min]){
+                min=j;
+            }
+        }
+        if(min!=i){
+            int temp=a[i];
+            a[i]=a[min];
+            a[min]=temp;
         }
 
-        a[j + 1] = key;
     }
      
      printf("\n-------OUTPUT--------\n");   
